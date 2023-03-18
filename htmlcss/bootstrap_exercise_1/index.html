@@ -11,20 +11,24 @@
     <title> bootstrap_exercise_1</title>
 </head>
 <body>
-    <table>
-    <div class="container">
-        <div class="col-6">
-            <h2>Client</h2>
-            <button type="button" class="btn btn-warning">
-            <img src="Assets/bx-plus.svg">Add Client</button>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col d-flex justify-content-start">
+            <h3>Client</h3>
+             </div>
+             <div class="col d-flex justify-content-end">
+            <button class="btn btn-dark" style="color: white">
+            <img src="Assets/bx-plus.svg" style="color:white">Add Clients</button>
+        </div>
         <div>
-            <form action="text" class="search-bar"> 
+            <div class="card container-fluid p-3">
+            <form class="d-flex" role="search"> 
                 <input type="text" placeholder="Keyword">
                 <button type="submit"> <img src="Assets/bx-search.svg">Search</button>
             </form>
+            </div>
+            </div>
         </div>
-    </div>
-    </table>
     <div class="container">
         <div class="table-responsive">
             <table class="table table-striped table-bordered table-hover" style="min-width: 800px;">
@@ -75,6 +79,5 @@
                 </ul>
             </div>
         </tbody>
-    </table>
 </body>
 </html>
