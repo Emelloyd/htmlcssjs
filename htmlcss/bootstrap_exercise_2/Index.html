@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Assets/bootstrap.min.css">
+
+    <script src="Assets/bootstrap.min.js"></script>
+
+    <title> bootstrap_exercise_1</title>
+
+    <style>
+         .strong{
+            font-weight: bold !important;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card mb-3">
+            <div class="row align-items-center">
+                <div class="col d-flex justify-content-start">
+                    <h3>Emelloyd Rodriguez</h3>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button class="btn btn-primary">
+                    <img src="Assets/bx-plus.svg">Add Clients</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div class="container">
+        <div class="card">
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-sm-3 text-center">
+                            <img class="rounded-circle img-fluid" src="Assets/Upload Photo.png">
+                            <button class="btn btn-primary justify-content-center">Upload Photo</button>
+                        </div>
+                        <div class="col-sm-5">
+                            <div><label for="form-label strong">ID:</label>001554
+                            </div>
+                            <div><label for="form-label strong">Birthdate:</label>10/18/1986
+                            </div>
+                            <div><label for="form-labe strong">Start Date:</label>10/18/1986
+                            </div>
+                            <div><label for="form-label strong">Language:</label>English
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab"href="#contact-details">Contact Details</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab"href="#Files-Attached">Files Attached</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#Service-Delivered">Service Delivered</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#Client-Progress-Notes">Client Progress Notes</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#Client-Funds-Monitor">Client Funds Monitor</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#Time-Tracker">Time Tracker</a></li>
+                <li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#Feedback-and-Complaints">Feedback and Complaints</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="contact-details" class="tab-pane active">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="form-label">Address 1</label>
+                                <input type="text" class="form-control" placeholder="Address"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Address 2</label>
+                                <input type="text" class="form-control" placeholder="Address"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Province</label>
+                                <input type="text" class="form-control" placeholder="Province"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" placeholder="City"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="form-label">Postal Code</label>
+                                <input type="text" class="form-control" placeholder="Postal Code"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Country</label>
+                                <select class="form-control form-select">
+                                    <option>-- Select Country --</option>
+                                    <option>Philippines</option>
+                                    <option>Peru</option>
+                                    <option>Japan</option>
+                                    <option>China</option>
+                                    <option>Malaysia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label class="form-label">Mobile Phone</label>
+                                <input type="text" class="form-control" placeholder="Mobile Phone"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Home Phone</label>
+                                <input type="text" class="form-control" placeholder="Mobile Phone"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="Email Address"/>
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="form-label">Other Phone</label>
+                                <input type="text" class="form-control" placeholder="Other Phone"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                <div id="Files-Attached" class="tab-pane fade">
+                    <div class="container">
+                        <h2>Files Attached</h2>
+                    </div>
+                </div>
+                <div id="Service-Delivered" class="tab-pane fade">
+                    <h2>Service Delivered</h2>
+                </div>
+                <div id="Client-Progress-Notes" class="tab-pane fade">
+                    <div class="container">
+                        <h2>Client Progress Notes</h2>
+                    </div>
+                </div>
+                <div id="Client-Funds-Monitor" class="tab-pane fade">
+                    <h2>Client Funds Monitor</h2>
+                </div>
+                <div id="Feedback-and-Complaints" class="tab-pane fade">
+                    <h2>Feedback and Complaints</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
