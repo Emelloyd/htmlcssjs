@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Exercise</title>
+</head>
+<style>
+  body {
+    background: rgb(228, 200, 172);
+    margin-top: 30vh;
+    align-self: center;
+    text-align: center;
+  }
+
+  div {
+    height: 150px;
+  }
+</style>
+
+<body>
+  <h1>Machine Problem 1</h1>
+  <div>
+    <label class="form-label">Enter the number:</label>
+    <input type="number" id="num">
+    <button type="button" onclick="myFunction()">Click</button>
+    <p id="number"></p>
+  </div>
+
+
+
+  <h1>Machine Problem2</h1>
+  <div>
+    <label class="form-label">Enter the letter:</label>
+    <input type="text" class="form-control shadow-none" id="name">
+    <button onclick="checkVowel()">Click</button>
+    <p id="txt"></p>
+  </div>
+  <script>
+    function myFunction() {
+      num = parseInt(document.getElementById("num").value);
+      if (num) {
+        if (num % 2 == 0)
+          document.getElementById("number").innerHTML = "It is a Even";
+        else
+          document.getElementById("number").innerHTML = "It is a Odd";
+      }
+    }
+
+
+    function checkVowel() {
+      nm = document.getElementById("name").value;
+      if (nm) {
+        if (nm == 'a' || nm == 'e' || nm == 'i' || nm == 'o' || nm == 'u' || nm == 'A' || nm == 'E' || nm == 'I' || nm == 'O' || nm == 'U') {
+          document.getElementById("txt").innerHTML = "It is a Vowel";
+        } else {
+          document.getElementById("txt").innerHTML = "It is a Consonant";
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
