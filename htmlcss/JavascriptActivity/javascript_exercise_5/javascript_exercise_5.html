@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="bg-success text-white-50 p-3">Machine Problem 1</h1>
+    <div id="invoice" class="methods_result">
+        <table style="width: 100%; padding: left;">
+            <div class="row">
+                <h2 class="bg-warning">Invoice Details</h2>
+                <div class="col-sm-8" id="invoice__to">Invoice to:</div>
+                <div class="col-sm-4" id="invoice__date">Date:</div>
+                <div class="col-sm-8" id="invoice__address">Address:</div>
+                <div class="col-sm-4" id="invoice__num">Invoice #:</div>
+                <div class="col-sm-8" id="invoice__payment__mode">Payment Mode:</div> 
+            </div>
+        </table>
+            <table id="invoice-table" style="width: 100%;">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th>Unit Price</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right;">Total Amount:</td>
+                    <td id="total-amount"></td>
+                </tr>
+            </tfoot>
+            </table>
+    </div>
+</body>
+<script>
+    let invoice = {
+    invoiceTo: "Juan Dela Cruz",
+    date: "2023-04-15",
+    address1: "810 Oroquieta Street Sta Cruz 1000",
+    address2: "Manila, Metro Manila, Philippines",
+    invoiceNumber: "6845",
+    paymentMode: "COD"
+};
+
+let invoiceItems = [
+    { description: "Mouse", Qty: 3, unitPrice: 200 },
+    { description: "Keyboard", Qty: 3, unitPrice: 400 },
+    { description: "Monitor", Qty: 6, unitPrice: 5400 },
+    { description: "CPU Tower Case", Qty: 3, unitPrice: 1200 },
+    { description: "Headset", Qty: 3, unitPrice: 500 },
+    { description: "UPS", Qty: 1, unitPrice: 4000 },
+];
+
+document.getElementById("invoice__to").innerHTML = invoice.invoiceTo;
+document.getElementById("invoice__address").innerHTML = `${invoice.address1}, ${invoice.address2}`;
+document.getElementById("invoice__num").innerHTML = invoice.invoiceNumber.padStart(10, "0");
+document.getElementById("invoice__date").innerHTML = formatDate(invoice.date);
+document.getElementById("invoice__payment__mode").innerHTML = invoice.paymentMode;
+
+function formatDate(dateString) {
+    let date = new Date(dateString);
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let formattedDate = day + "/" + month + "/" + date.getFullYear();
+    return formattedDate;
+}
+
+const tableBody = document.querySelector("#invoice-table tbody");
+const totalAmount = document.querySelector("#total-amount");
+
+let subtotal = 0;
+for (let i = 0; i < invoiceItems.length; i++) {
+    const item = invoiceItems[i];
+    const amount = item.Qty * item.unitPrice;
+    subtotal += amount;
+    const row = document.createElement("tr");
+    row.innerHTML = `<td>${item.description}</td><td>${item.Qty}</td><td>${item.unitPrice}</td><td>${amount}</td>`;
+    tableBody.appendChild(row);
+}
+
+totalAmount.innerHTML = subtotal;
+</script>
+
+</html>
